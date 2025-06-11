@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hi pookie butt! Wondering what this is all about? Check the link below</title>
-    <link rel="stylesheet" href="https://notability.com/n/zJb9vE__45P4SzK27pOCy">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body class="text-center mt-5">
     <div class="container">
-        <h1 class="mb-4">Enter Your Password</h1>
+        <h1 class="mb-4">Welcome to Something Special 💌</h1>
+        <p class="lead mb-4">
+            This isn't just a website. It's a journey — a collection of memories and promises, just for you.  
+            To begin, follow the instructions below, find the next clue, and enter the password to unlock the first stage of our adventure.
+        </p>
+        
+        <img src="{{ url_for('static', filename='images/homepage.jpg') }}" class="img-fluid rounded mb-4" style="max-width: 400px;">
+
         <form method="POST">
             <input type="text" name="password" class="form-control w-50 mx-auto mb-3" placeholder="Enter a password" required>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Unlock</button>
         </form>
+
         {% if error %}
             <div class="alert alert-danger mt-3">{{ error }}</div>
         {% endif %}
+
+        <hr class="my-5">
+
+        <p class="mb-2">Need a hint or want to visit somewhere else?</p>
+        <a href="https://notability.com/n/zJb9vE__45P4SzK27pOCy" class="btn btn-outline-secondary" target="_blank">Go to Special Link</a>
     </div>
 </body>
 </html>
