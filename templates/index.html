@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="text-center mt-5">
+    <div class="container">
+        <h1 class="mb-4">Enter Your Password</h1>
+        <form method="POST">
+            <input type="text" name="password" class="form-control w-50 mx-auto mb-3" placeholder="Enter a password" required>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {% if error %}
+            <div class="alert alert-danger mt-3">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
